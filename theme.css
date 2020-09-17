@@ -1,0 +1,80 @@
+html.theme-dark {
+    --background-primary: #000;
+    --background-secondary: #000;
+    --background-secondary-alt: #000;
+    --background-tertiary: #000;
+    --background-accent: #000;
+    --background-floating: #000;
+    --channeltextarea-background: #000;
+    --text-normal: #888;
+    --text-link: #079;
+    --header-primary: #888;
+    --interactive-active: #888;
+}
+
+.da-wrapper > span.da-expandedFolderBackground {
+    min-height: 48px;
+
+    box-shadow: 0 0 0 1px #333;
+}
+
+.da-folderIconWrapper, .da-expandedFolderIconWrapper, .da-folder {
+    background-color: transparent;
+}
+
+.da-scroller::-webkit-scrollbar, .da-uploadModal {
+    background-color: #000 !important;
+}
+
+.da-scroller::-webkit-scrollbar-track {
+    background-color: #000 !important;
+    border-color: #000 !important;
+}
+
+.da-scroller::-webkit-scrollbar-track-piece {
+    background-color: #000 !important;
+    border-color: #000 !important;
+    border-radius: 0 !important;
+}
+
+.da-container, .theme-dark .footer-3rDWdC, .da-message, .theme-dark .headerNormal-T_seeN, .da-bodyInner, .da-footer {
+    background-color: #000 !important;
+}
+
+.da-wrapper.guilds-1SWlCJ, .da-sidebar, .da-members, .da-message .da-imageWrapper img, .da-channelTextArea button, .da-chat > .da-title, img.emoji, .hljs {
+    filter: brightness(30%);
+
+    transition: 300ms filter ease-in-out;
+}
+
+.da-wrapper.guilds-1SWlCJ:hover, .da-sidebar:hover, .da-members:hover, .da-message .da-imageWrapper img:hover, .da-channelTextArea button:hover, .da-chat > .da-title:hover, img.emoji:hover, .hljs:hover {
+    filter: brightness(70%);
+}
+
+.da-channelTextArea .da-webkit {
+    border: 1px #333 solid;
+    border-radius: 25px;
+}
+
+.da-zalgo .da-avatar::after {
+    content: '';
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    transition: 300ms background-color ease-in-out;
+}
+
+.da-zalgo .da-avatar:hover::after {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.da-unread.da-container {
+    background-color: transparent !important;
+}
