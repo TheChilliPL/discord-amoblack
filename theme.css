@@ -1,3 +1,14 @@
+/**
+ * @name Discord AMOblack (local)
+ * @version 1.0
+ * @description Very dark theme, ideal for AMOLED displays.
+ * For bug reports, use GitHub issues. Open our GitHub by using the Website button below.
+ * @author TheChilliPL
+ * @authorId 213903338251485185
+ * @website https://github.com/TheChilliPL/discord-amoblackf
+ * @source https://github.com/TheChilliPL/discord-amoblackf
+ */
+
 html.theme-dark {
     --background-primary: #000;
     --background-secondary: #000;
@@ -77,4 +88,60 @@ html.theme-dark {
 
 .da-unread.da-container {
     background-color: transparent !important;
+}
+
+.theme-dark .body-3iLsc4 {
+    background-color: #000;
+}
+
+.textarea-2r0oV8, .textarea-2r0oV8:hover {
+    border: 1px #333 solid;
+}
+
+.theme-dark .wrapper-1-Fsb8 {
+    background-color: #000;
+}
+
+.theme-dark .root-1gCeng {
+    background-color: #000;
+}
+
+.authedApp-mj2Hmd {
+    border: 1px #333 solid;
+}
+
+.theme-dark .paymentPane-3bwJ6A,
+.theme-dark .paginator-166-09,
+.theme-dark .payment-xT17Mq {
+    background-color: #000;
+}
+
+.theme-dark .codeRedemptionRedirect-1wVR4b {
+    background-color: #000;
+}
+
+.input-2VB9rf {
+    background-color: #000;
+    border: 1px #333 solid;
+}
+
+.theme-dark .headerClickable-2IVFo9,
+.theme-dark .headerDefault-1wrJcN {
+    background: none;
+}
+
+.theme-dark .tierHeaderLocked-1a2opw {
+    background-color: #000;
+    border: 1px #333 solid;
+}
+
+.theme-dark .tierBody-x9kBBp {
+    background-color: #000;
+    border: 1px #333 solid;
+    border-top: 0;
+}
+
+/* Member count plugin support */
+.theme-dark #MemberCount {
+    background-color: #000;
 }
