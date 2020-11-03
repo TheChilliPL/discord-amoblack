@@ -1,0 +1,165 @@
+/**
+ * @name Discord AMOblack (local)
+ * @version 1.0
+ * @description Very dark theme, ideal for AMOLED displays.
+ * For bug reports, use GitHub issues. Open our GitHub by using the Website button below.
+ * @author TheChilliPL
+ * @authorId 213903338251485185
+ * @website https://github.com/TheChilliPL/discord-amoblack
+ * @source https://github.com/TheChilliPL/discord-amoblack
+ */
+
+@mixin before {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    @content;
+  }
+}
+
+@mixin pseudo-border(
+  $color,
+  $radius: 5px,
+  $relative: true,
+  $z-index: null
+) {
+  @if $relative {
+    position: relative;
+  }
+
+  @include before {
+    border: 1px $color solid;
+    border-radius: $radius;
+
+    pointer-events: none;
+
+    @if ($z-index) {
+      z-index: $z-index;
+    }
+  }
+}
+
+html.theme-dark {
+  // Variables
+  --background-primary: #000; //#36393f
+  --background-secondary: #000; //#2f3136
+  --background-secondary-alt: #000; //#292b2f
+  --background-tertiary: #000; //#202225
+  --background-accent: #000; //#4f545c
+  --background-floating: #000; //#18191c
+  --channeltextarea-background: #000;
+  --text-normal: #888;
+  --text-link: #079;
+  --header-primary: #888;
+  --interactive-active: var(--text-normal);
+  --background-modifier-active: transparent;
+  --interactive-selected: var(--text-normal);
+  --background-modifier-selected: transparent;
+  --interactive-hover: var(--text-normal);
+  --background-modifier-hover: transparent;
+  --deprecated-text-input-bg: #000;
+  --deprecated-text-input-border: #666;
+
+  --ab--selected: #666;
+  --ab--hover: #444;
+  --ab--border: #222;
+
+  // Interactive shade to outline
+  // Member/DM list
+  .selected-aXhQR6 .layout-2DM8Md {
+    @include pseudo-border(var(--ab--selected));
+  }
+  .clickable-1JJAn8.container-2Pjhx-:hover, .clickable-1JJAn8.container-2Pjhx-:hover .muted-3mU76i {
+    @include pseudo-border(var(--ab--hover));
+  }
+  // Channel list
+  .modeSelected-1zApJ_ .content-3at_AU, .modeSelected-1zApJ_:hover .content-3at_AU {
+    @include pseudo-border(var(--ab--selected));
+  }
+  .wrapper-1ucjTd:hover .content-3at_AU {
+    @include pseudo-border(var(--ab--hover));
+  }
+
+  // Channel text area border
+  .scrollableContainer-2NUZem {
+    border: 1px var(--deprecated-text-input-border) solid;
+  }
+
+  // Server folder border
+  .expandedFolderBackground-2sPsd- {
+    min-height: 48px;
+    @include pseudo-border(var(--ab--border), 24px, false, 1000);
+    pointer-events: none;
+  }
+
+  // Big borders ---------------------------
+  // Title bar
+  .titleBar-AC4pGV {
+    border-bottom: 1px var(--ab--border) solid;
+  }
+  // Server list
+  .guilds-1SWlCJ {
+    width: 71px;
+    border-right: 1px var(--ab--border) solid;
+  }
+  // Channel list
+  .sidebar-2K8pFh {
+    border-right: 1px var(--ab--border) solid;
+  }
+  // Channel title
+  .title-3qD0b- {
+    border-bottom: 1px var(--ab--border) solid;
+  }
+  // Members list
+  .members-1998pB {
+    border-left: 1px var(--ab--border) solid;
+  }
+
+  // Dimming --------------------------------
+  // Server icons
+  .blobContainer-239gwq,
+  .closedFolderIconWrapper-15K9MK,
+  .message-2qnXI6 .imageWrapper-2p5ogY {
+    position: relative;
+    @include before {
+      background-color: transparentize(#000, 0.7);
+      z-index: 999;
+      pointer-events: none;
+    }
+  }
+
+  // Fixes ----------------------------------
+  // Friends fullscreen list fix
+  .container-1D34oG {
+    background: var(--background-primary);
+  }
+
+  // Custom status modal fix
+  .root-1gCeng {
+    background: var(--background-primary);
+  }
+  // Custom status modal footer fix
+  .footer-2gL1pp {
+    background: var(--background-secondary);
+  }
+
+  // Group add friend selected list element fix
+  .friendSelected-1sa4bG {
+    background: var(--background-modifier-selected);
+    @include pseudo-border(var(--ab--selected));
+  }
+
+  // Profile modal header fix
+  .headerNormal-T_seeN {
+    background: var(--background-tertiary);
+  }
+  .body-3iLsc4, .footer-1fjuF6 {
+    background: var(--background-secondary);
+  }
+
+  // Member count plugin fix
+  #MemberCount {
+    background: var(--background-secondary);
+  }
+}
