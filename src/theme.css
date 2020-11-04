@@ -27,6 +27,7 @@ html.theme-dark {
   --background-modifier-hover: transparent;
   --deprecated-text-input-bg: #000;
   --deprecated-text-input-border: #666;
+  --background-mentioned-hover: transparent;
   --ab--selected: #666;
   --ab--hover: #444;
   --ab--border: #222;
@@ -105,6 +106,41 @@ html.theme-dark .expandedFolderBackground-2sPsd-::before {
   border-radius: 24px;
   pointer-events: none;
   z-index: 1000;
+}
+html.theme-dark .embedFull-2tM8-- {
+  border: 1px solid var(--ab--border);
+  border-left-width: 4px;
+}
+html.theme-dark .embedFull-2tM8-- .embedMedia-1guQoW {
+  margin-top: 5px;
+}
+html.theme-dark .mentioned-xhSam7 {
+  background-color: transparent;
+  position: relative;
+}
+html.theme-dark .mentioned-xhSam7::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 1px #faa61a solid;
+  border-radius: 5px;
+  pointer-events: none;
+  border-left-width: 4px;
+}
+html.theme-dark .buttons-cl5qTG .wrapper-2aW0bm {
+  border: 1px var(--ab--border) solid;
+}
+html.theme-dark .menu-3sdvDG {
+  border: 1px var(--ab--border) solid;
+}
+html.theme-dark .drawerSizingWrapper-17Mss4 {
+  border: 1px var(--ab--border) solid;
+}
+html.theme-dark .modal-3c3bKg .inner-1ilYF7 {
+  border: 1px var(--ab--border) solid;
 }
 html.theme-dark .titleBar-AC4pGV {
   border-bottom: 1px var(--ab--border) solid;

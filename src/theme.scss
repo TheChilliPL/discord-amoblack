@@ -9,8 +9,20 @@
  * @source https://github.com/TheChilliPL/discord-amoblack
  */
 
-@mixin before {
-  &::before {
+@mixin pseudo($after: false) {
+  @if $after {
+    &::after {
+      @content;
+    }
+  } @else {
+    &::before {
+      @content;
+    }
+  }
+}
+
+@mixin pseudo-full($after: false) {
+  @include pseudo($after) {
     content: "";
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
@@ -22,17 +34,20 @@
   $color,
   $radius: 5px,
   $relative: true,
-  $z-index: null
+  $z-index: null,
+  $after: false
 ) {
   @if $relative {
     position: relative;
   }
 
-  @include before {
+  @include pseudo-full($after) {
     border: 1px $color solid;
     border-radius: $radius;
 
     pointer-events: none;
+
+    @content;
 
     @if ($z-index) {
       z-index: $z-index;
@@ -60,6 +75,7 @@ html.theme-dark {
   --background-modifier-hover: transparent;
   --deprecated-text-input-bg: #000;
   --deprecated-text-input-border: #666;
+  --background-mentioned-hover: transparent;
 
   --ab--selected: #666;
   --ab--hover: #444;
@@ -93,6 +109,44 @@ html.theme-dark {
     pointer-events: none;
   }
 
+  // Embed border
+  .embedFull-2tM8-- {
+    border: 1px solid var(--ab--border);
+    border-left-width: 4px;
+
+    .embedMedia-1guQoW {
+      margin-top: 5px;
+    }
+  }
+
+  // Mentioned message
+  .mentioned-xhSam7 {
+    background-color: transparent;
+    @include pseudo-border(#faa61a, $after: true) {
+      border-left-width: 4px;
+    };
+  }
+
+  // Message buttons
+  .buttons-cl5qTG .wrapper-2aW0bm {
+    border: 1px var(--ab--border) solid;
+  }
+
+  // Context menus
+  .menu-3sdvDG {
+    border: 1px var(--ab--border) solid;
+  }
+
+  // Emoji picker
+  .drawerSizingWrapper-17Mss4 {
+    border: 1px var(--ab--border) solid;
+  }
+
+  // Modals
+  .modal-3c3bKg .inner-1ilYF7 {
+    border: 1px var(--ab--border) solid;
+  }
+
   // Big borders ---------------------------
   // Title bar
   .titleBar-AC4pGV {
@@ -122,7 +176,7 @@ html.theme-dark {
   .closedFolderIconWrapper-15K9MK,
   .message-2qnXI6 .imageWrapper-2p5ogY {
     position: relative;
-    @include before {
+    @include pseudo-full {
       background-color: transparentize(#000, 0.7);
       z-index: 999;
       pointer-events: none;
