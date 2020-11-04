@@ -1,6 +1,6 @@
 /**
  * @name Discord AMOblack (local)
- * @version 1.0
+ * @version 1.1
  * @description Very dark theme, ideal for AMOLED displays.
  * For bug reports, use GitHub issues. Open our GitHub by using the Website button below.
  * @author TheChilliPL
@@ -88,9 +88,6 @@ html.theme-dark .wrapper-1ucjTd:hover .content-3at_AU::before {
   border-radius: 5px;
   pointer-events: none;
 }
-html.theme-dark .scrollableContainer-2NUZem {
-  border: 1px var(--deprecated-text-input-border) solid;
-}
 html.theme-dark .expandedFolderBackground-2sPsd- {
   min-height: 48px;
   pointer-events: none;
@@ -106,6 +103,9 @@ html.theme-dark .expandedFolderBackground-2sPsd-::before {
   border-radius: 24px;
   pointer-events: none;
   z-index: 1000;
+}
+html.theme-dark .expandedFolderBackground-2sPsd-.collapsed-1GMuSb::before {
+  border-radius: 17px;
 }
 html.theme-dark .embedFull-2tM8-- {
   border: 1px solid var(--ab--border);
@@ -158,6 +158,28 @@ html.theme-dark .title-3qD0b- {
 html.theme-dark .members-1998pB {
   border-left: 1px var(--ab--border) solid;
 }
+html.theme-dark .header-2o-2hj, html.theme-dark .searchBar-6Kv8R2 {
+  border-bottom: 1px var(--ab--border) solid;
+}
+html.theme-dark .searchBar-6Kv8R2 {
+  height: 47px;
+}
+html.theme-dark .panels-j1Uci_ {
+  border-top: 1px var(--ab--border) solid;
+}
+html.theme-dark .form-2fGMdU {
+  padding: 0;
+  border-top: 1px var(--ab--border) solid;
+}
+html.theme-dark .channelTextArea-rNsIhG {
+  margin: 4px 0 5px;
+}
+html.theme-dark .tooltipPointer-3ZfirK {
+  border-top-color: var(--ab--selected);
+}
+html.theme-dark .tooltipContent-bqVLWK {
+  border: 1px var(--ab--selected) solid;
+}
 html.theme-dark .blobContainer-239gwq,
 html.theme-dark .closedFolderIconWrapper-15K9MK,
 html.theme-dark .message-2qnXI6 .imageWrapper-2p5ogY {
@@ -206,8 +228,37 @@ html.theme-dark .headerNormal-T_seeN {
 html.theme-dark .body-3iLsc4, html.theme-dark .footer-1fjuF6 {
   background: var(--background-secondary);
 }
+html.theme-dark .uploadModal-2ifh8j {
+  background: var(--background-primary);
+}
+html.theme-dark .footer-3mqk7D {
+  background: var(--background-secondary);
+}
+html.theme-dark .typing-2GQL18 {
+  bottom: 100%;
+}
+html.theme-dark .container-3ayLPN {
+  background: var(--background-primary);
+  border: 1px var(--ab--border) solid;
+}
+html.theme-dark .option-96V44q.selected-rZcOL- {
+  background: var(--background-secondary);
+  border: 1px var(--ab--selected) solid;
+}
+html.theme-dark .option-96V44q::after, html.theme-dark .option-96V44q.selected-rZcOL-::after {
+  background: transparent;
+}
 html.theme-dark #MemberCount {
   background: var(--background-secondary);
+}
+html.theme-dark .chatCounter-XOMPsh {
+  bottom: 0;
+  right: 120px;
+  color: var(--ab--hover);
+}
+html.theme-dark .bf-toolbar::before {
+  background: var(--background-accent);
+  border: 1px var(--ab--selected) solid;
 }
 
 /*# sourceMappingURL=theme.css.map */

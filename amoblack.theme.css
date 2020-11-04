@@ -1,6 +1,6 @@
 /**
  * @name Discord AMOblack
- * @version 1.0
+ * @version Newest stable
  * @description Very dark theme, ideal for AMOLED displays.
  * For bug reports, use GitHub issues. Open our GitHub by using the Website button below.
  * @author TheChilliPL
@@ -9,4 +9,4 @@
  * @source https://github.com/TheChilliPL/discord-amoblack
  */
 
-@import url("https://raw.githack.com/TheChilliPL/discord-amoblack/main/src/theme.css");
+@import url("https://raw.githack.com/TheChilliPL/discord-amoblack/main/src/theme.min.css");
