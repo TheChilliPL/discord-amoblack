@@ -1,6 +1,6 @@
 /**
  * @name Discord AMOblack (local)
- * @version 1.1
+ * @version 1.2-pre1
  * @description Very dark theme, ideal for AMOLED displays.
  * For bug reports, use GitHub issues. Open our GitHub by using the Website button below.
  * @author TheChilliPL
@@ -60,10 +60,10 @@ html.theme-dark .clickable-1JJAn8.container-2Pjhx-:hover::before, html.theme-dar
   border-radius: 5px;
   pointer-events: none;
 }
-html.theme-dark .modeSelected-1zApJ_ .content-3at_AU, html.theme-dark .modeSelected-1zApJ_:hover .content-3at_AU {
+html.theme-dark .modeSelected-346R90 .content-1x5b-n, html.theme-dark .modeSelected-346R90:hover .content-1x5b-n {
   position: relative;
 }
-html.theme-dark .modeSelected-1zApJ_ .content-3at_AU::before, html.theme-dark .modeSelected-1zApJ_:hover .content-3at_AU::before {
+html.theme-dark .modeSelected-346R90 .content-1x5b-n::before, html.theme-dark .modeSelected-346R90:hover .content-1x5b-n::before {
   content: "";
   position: absolute;
   top: 0;
@@ -74,10 +74,10 @@ html.theme-dark .modeSelected-1zApJ_ .content-3at_AU::before, html.theme-dark .m
   border-radius: 5px;
   pointer-events: none;
 }
-html.theme-dark .wrapper-1ucjTd:hover .content-3at_AU {
+html.theme-dark .wrapper-2jXqOf:hover .content-1x5b-n {
   position: relative;
 }
-html.theme-dark .wrapper-1ucjTd:hover .content-3at_AU::before {
+html.theme-dark .wrapper-2jXqOf:hover .content-1x5b-n::before {
   content: "";
   position: absolute;
   top: 0;
