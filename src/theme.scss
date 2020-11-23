@@ -74,7 +74,8 @@ html.theme-dark {
   --interactive-hover: var(--text-normal);
   --background-modifier-hover: transparent;
   --deprecated-text-input-bg: #000;
-  --deprecated-text-input-border: #666;
+  --deprecated-text-input-border: var(--ab--border);
+  --deprecated-text-input-border-hover: var(--ab--hover);
   --background-mentioned-hover: transparent;
 
   --ab--selected: #666;
@@ -93,7 +94,7 @@ html.theme-dark {
   .modeSelected-346R90 .content-1x5b-n, .modeSelected-346R90:hover .content-1x5b-n {
     @include pseudo-border(var(--ab--selected));
   }
-  .wrapper-2jXqOf:hover .content-1x5b-n {
+  .wrapper-2jXpOf:hover .content-1x5b-n {
     @include pseudo-border(var(--ab--hover));
   }
 
@@ -146,6 +147,53 @@ html.theme-dark {
     border: 1px var(--ab--border) solid;
   }
 
+  // Textboxes
+  .input-cIJ7To.focused-1mmYsC, .input-cIJ7To:focus {
+    border-color: var(--ab--selected);
+  }
+
+  // Note textbox
+  .textarea-2r0oV8 {
+    border: 1px var(--ab--border) solid;
+
+    &:hover {
+      border-color: var(--ab--hover);
+    }
+
+    &:focus {
+      border-color: var(--ab--selected);
+    }
+  }
+
+  .search-2oPWTC {
+    outline: 1px var(--ab--border) solid;
+
+    &:hover {
+      outline-color: var(--ab--hover);
+    }
+
+    &.focused-31_ccS {
+      outline-color: var(--ab--selected);
+    }
+  }
+
+  // Dropdown
+  .select-2fjwPw {
+    border-color: var(--ab--border);
+
+    &:hover {
+      border-color: var(--ab--hover);
+    }
+
+    &.open-kZ53_U {
+      border-color: var(--ab--selected);
+    }
+  }
+
+  .popout-VcNcHB {
+    border-color: var(--ab--border);
+  }
+
   // Layout borders ---------------------------
   // Title bar
   .titleBar-AC4pGV {
@@ -169,7 +217,7 @@ html.theme-dark {
     border-left: 1px var(--ab--border) solid;
   }
   // Sidebar header and DM search bar
-  .header-2o-2hj, .searchBar-6Kv8R2 {
+  .header-2V-4Sw, .searchBar-6Kv8R2 {
     border-bottom: 1px var(--ab--border) solid;
   }
   .searchBar-6Kv8R2 {
@@ -188,6 +236,7 @@ html.theme-dark {
   .form-2fGMdU {
     padding: 0;
     border-top: 1px var(--ab--border) solid;
+    background: var(--channeltextarea-background);
   }
   .channelTextArea-rNsIhG {
     margin: 4px 0 5px;
